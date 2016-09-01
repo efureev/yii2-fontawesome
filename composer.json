@@ -1,6 +1,7 @@
 {
   "name": "efureev/yii2-fontawesome",
   "description": "Asset Bundle for Yii2 with Font Awesome",
+  "version" : "2.2.1",
   "keywords": [
     "yii2",
     "font",
@@ -29,7 +30,7 @@
   },
   "autoload": {
     "psr-4": {
-      "efureev\\src\\fontawesome\\": ""
+      "efureev\\fontawesome\\": "src/"
     }
   },
   "extra": {
