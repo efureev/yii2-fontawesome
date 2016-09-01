@@ -1,22 +1,17 @@
 <?php
-/**
- * UnorderedList.php
- * @author Revin Roman
- * @link https://rmrevin.com
- */
 
-namespace rmrevin\yii\fontawesome\component;
+namespace efureev\fontawesome\components;
 
-use rmrevin\yii\fontawesome\FA;
+use efureev\fontawesome\FA;
 use yii\helpers\Html;
 
 /**
  * Class UnorderedList
- * @package rmrevin\yii\fontawesome\component
+ *
+ * @package efureev\fontawesome\components
  */
 class UnorderedList
 {
-
     /**
      * @var string
      */
@@ -49,6 +44,7 @@ class UnorderedList
 
     /**
      * @return string
+     * @throws \yii\base\InvalidConfigException
      */
     public function __toString()
     {
@@ -58,8 +54,9 @@ class UnorderedList
     /**
      * @param string|Icon $icon
      * @param string|null $label
-     * @param array $options
-     * @return static
+     * @param array       $options
+     * @return $this
+     * @throws \yii\base\InvalidConfigException
      */
     public function item($icon, $label = null, $options = [])
     {
@@ -76,6 +73,7 @@ class UnorderedList
 
     /**
      * Change html tag.
+     *
      * @param string $tag
      * @return static
      * @throws \yii\base\InvalidParamException
@@ -89,7 +87,7 @@ class UnorderedList
 
     /**
      * @param string|null $tag
-     * @param array $options
+     * @param array       $options
      * @return string
      * @throws \yii\base\InvalidConfigException
      */

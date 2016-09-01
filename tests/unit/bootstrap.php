@@ -1,9 +1,4 @@
 <?php
-/**
- * bootstrap.php
- * @author Revin Roman
- * @link https://rmrevin.ru
- */
 
 define('YII_ENABLE_ERROR_HANDLER', true);
 define('YII_DEBUG', true);

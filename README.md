@@ -4,24 +4,23 @@ Yii 2 [Font Awesome](http://fortawesome.github.io/Font-Awesome/) Asset Bundle
 This extension provides a assets bundle with [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 for [Yii framework 2.0](http://www.yiiframework.com/) applications and helper to use icons.
 
-For license information check the [LICENSE](https://github.com/rmrevin/yii2-fontawesome/blob/master/LICENSE)-file.
+For license information check the [LICENSE](https://github.com/efureev/yii2-fontawesome/blob/master/LICENSE)-file.
 
-[![License](https://poser.pugx.org/rmrevin/yii2-fontawesome/license.svg)](https://packagist.org/packages/rmrevin/yii2-fontawesome)
-[![Latest Stable Version](https://poser.pugx.org/rmrevin/yii2-fontawesome/v/stable.svg)](https://packagist.org/packages/rmrevin/yii2-fontawesome)
-[![Latest Unstable Version](https://poser.pugx.org/rmrevin/yii2-fontawesome/v/unstable.svg)](https://packagist.org/packages/rmrevin/yii2-fontawesome)
-[![Total Downloads](https://poser.pugx.org/rmrevin/yii2-fontawesome/downloads.svg)](https://packagist.org/packages/rmrevin/yii2-fontawesome)
+[![License](https://poser.pugx.org/efureev/yii2-fontawesome/license.svg)](https://packagist.org/packages/efureev/yii2-fontawesome)
+[![Latest Stable Version](https://poser.pugx.org/efureev/yii2-fontawesome/v/stable.svg)](https://packagist.org/packages/efureev/yii2-fontawesome)
+[![Latest Unstable Version](https://poser.pugx.org/efureev/yii2-fontawesome/v/unstable.svg)](https://packagist.org/packages/efureev/yii2-fontawesome)
+[![Total Downloads](https://poser.pugx.org/efureev/yii2-fontawesome/downloads.svg)](https://packagist.org/packages/efureev/yii2-fontawesome)
 
 Code Status
 -----------
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rmrevin/yii2-fontawesome/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rmrevin/yii2-fontawesome/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/rmrevin/yii2-fontawesome/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/rmrevin/yii2-fontawesome/?branch=master)
-[![Travis CI Build Status](https://travis-ci.org/rmrevin/yii2-fontawesome.svg)](https://travis-ci.org/rmrevin/yii2-fontawesome)
-[![Dependency Status](https://www.versioneye.com/user/projects/54119b799e16229fe00000da/badge.svg)](https://www.versioneye.com/user/projects/54119b799e16229fe00000da)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/efureev/yii2-fontawesome/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/efureev/yii2-fontawesome/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/efureev/yii2-fontawesome/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/efureev/yii2-fontawesome/?branch=master)
+[![Travis CI Build Status](https://travis-ci.org/efureev/yii2-fontawesome.svg)](https://travis-ci.org/efureev/yii2-fontawesome)
 
 Support
 -------
-* [GutHub issues](https://github.com/rmrevin/yii2-fontawesome/issues)
-* [Public chat](https://gitter.im/rmrevin/support)
+* [GutHub issues](https://github.com/efureev/yii2-fontawesome/issues)
+* [Public chat](https://gitter.im/efureev/support)
 
 Installation
 ------------
@@ -31,13 +30,13 @@ The preferred way to install this extension is through [composer](https://getcom
 Either run
 
 ```bash
-composer require "rmrevin/yii2-fontawesome:~2.15"
+composer require "efureev/yii2-fontawesome:~2"
 ```
 
 or add
 
 ```
-"rmrevin/yii2-fontawesome": "~2.15",
+"efureev/yii2-fontawesome": "~2",
 ```
 
 to the `require` section of your `composer.json` file.
@@ -48,7 +47,7 @@ Usage
 In view
 
 ```php
-rmrevin\yii\fontawesome\AssetBundle::register($this);
+efureev\fontawesome\AssetBundle::register($this);
 
 ```
 
@@ -61,7 +60,7 @@ class AppAsset extends AssetBundle
 
 	public $depends = [
 		// ...
-		'\rmrevin\yii\fontawesome\AssetBundle'
+		'\efureev\fontawesome\AssetBundle'
 	];
 }
 
@@ -70,17 +69,17 @@ class AppAsset extends AssetBundle
 Class reference
 ---------------
 
-Namespace: `rmrevin\yii\fontawesome`;
+Namespace: `efureev\fontawesome`;
 
 ###Class `FA` or `FontAwesome`
 
-* `static FA::icon($name, $options=[])` - Creates an [`component\Icon`](#class-componenticon-icon) that can be used to FontAwesome html icon
+* `static FA::icon($name, $options=[])` - Creates an [`components\Icon`](#class-componenticon-icon) that can be used to FontAwesome html icon
   * `$name` - name of icon in font awesome set.
   * `$options` - additional attributes for `i.fa` html tag.
-* `static FA::stack($name, $options=[])` - Creates an [`component\Stack`](#class-componentstack-stack) that can be used to FontAwesome html icon
+* `static FA::stack($name, $options=[])` - Creates an [`components\Stack`](#class-componentstack-stack) that can be used to FontAwesome html icon
   * `$options` - additional attributes for `span.fa-stack` html tag.
 
-###Class `component\Icon` (`$Icon`)
+###Class `components\Icon` (`$Icon`)
 
 * `(string)$Icon` - render icon
 * `$Icon->render()` - render icon
@@ -103,7 +102,7 @@ Namespace: `rmrevin\yii\fontawesome`;
 * `$Icon->flip($value)` - add to html tag css class with rotate
   * `$value` - flip value (variants: `FA::FLIP_HORIZONTAL`, `FA::FLIP_VERTICAL`)
 
-###Class `component\Stack` (`$Stack`)
+###Class `components\Stack` (`$Stack`)
 
 * `(string)$Stack` - render icon stack
 * `$Stack->render()` - render icon stack
@@ -119,7 +118,7 @@ Helper examples
 ---------------
 
 ```php
-use rmrevin\yii\fontawesome\FA;
+use efureev\fontawesome\FA;
 
 // normal use
 echo FA::icon('home'); // <i class="fa fa-home"></i>

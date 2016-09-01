@@ -1,3 +1,7 @@
+2016-09-01 - 2.2
+-------------------
+* change destination FA to bower
+
 2016-08-31 - 2.16.1
 -------------------
 * Fix options in li item.

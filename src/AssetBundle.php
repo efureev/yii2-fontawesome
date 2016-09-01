@@ -1,15 +1,9 @@
 <?php
-/**
- * AssetBundle.php
- * @author Revin Roman
- * @link https://rmrevin.ru
- */
 
-namespace rmrevin\yii\fontawesome;
+namespace efureev\fontawesome;
 
 /**
  * Class AssetBundle
- * @package rmrevin\yii\fontawesome
  */
 class AssetBundle extends \yii\web\AssetBundle
 {
@@ -17,7 +11,7 @@ class AssetBundle extends \yii\web\AssetBundle
     /**
      * @inherit
      */
-    public $sourcePath = '@vendor/rmrevin/yii2-fontawesome/assets';
+    public $sourcePath = '@bower/components-font-awesome';
 
     /**
      * @inherit
@@ -29,13 +23,14 @@ class AssetBundle extends \yii\web\AssetBundle
     /**
      * Initializes the bundle.
      * Set publish options to copy only necessary files (in this case css and font folders)
+     *
      * @codeCoverageIgnore
      */
     public function init()
     {
         parent::init();
 
-        $this->publishOptions['beforeCopy'] = function ($from, $to) {
+        $this->publishOptions['beforeCopy'] = function ($from) {
             return preg_match('%(/|\\\\)(fonts|css)%', $from);
         };
     }

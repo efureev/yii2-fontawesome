@@ -1,23 +1,18 @@
 <?php
-/**
- * Stack.php
- * @author Revin Roman
- * @link https://rmrevin.ru
- */
 
-namespace rmrevin\yii\fontawesome\component;
+namespace efureev\fontawesome\components;
 
-use rmrevin\yii\fontawesome\FA;
+use efureev\fontawesome\FA;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
 /**
  * Class Stack
- * @package rmrevin\yii\fontawesome\component
+ *
+ * @package efureev\fontawesome\components
  */
 class Stack
 {
-
     /**
      * @var string
      */
@@ -55,6 +50,7 @@ class Stack
 
     /**
      * @return string
+     * @throws \yii\base\InvalidConfigException
      */
     public function __toString()
     {
@@ -63,7 +59,7 @@ class Stack
 
     /**
      * @param string|Icon $icon
-     * @param array $options
+     * @param array       $options
      * @return self
      */
     public function icon($icon, $options = [])
@@ -79,7 +75,7 @@ class Stack
 
     /**
      * @param string|Icon $icon
-     * @param array $options
+     * @param array       $options
      * @return self
      */
     public function on($icon, $options = [])
@@ -95,6 +91,7 @@ class Stack
 
     /**
      * Change html tag.
+     *
      * @param string $tag
      * @return static
      * @throws \yii\base\InvalidParamException
@@ -108,7 +105,7 @@ class Stack
 
     /**
      * @param string|null $tag
-     * @param array $options
+     * @param array       $options
      * @return string
      * @throws \yii\base\InvalidConfigException
      */

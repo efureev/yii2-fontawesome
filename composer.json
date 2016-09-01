@@ -1,8 +1,8 @@
 {
-  "name": "rmrevin/yii2-fontawesome",
+  "name": "efureev/yii2-fontawesome",
   "description": "Asset Bundle for Yii2 with Font Awesome",
   "keywords": [
-    "yii",
+    "yii2",
     "font",
     "awesome",
     "asset",
@@ -12,24 +12,24 @@
   "license": "MIT",
   "minimum-stability": "stable",
   "support": {
-    "issues": "https://github.com/rmrevin/yii2-fontawesome/issues",
-    "source": "https://github.com/rmrevin/yii2-fontawesome"
+    "issues": "https://github.com/efureev/yii2-fontawesome/issues",
+    "source": "https://github.com/efureev/yii2-fontawesome"
   },
   "authors": [
     {
-      "name": "Revin Roman",
-      "email": "roman@rmrevin.com",
-      "homepage": "https://rmrevin.com/"
+      "name": "Feugene",
+      "email": "fureev@gmail.com",
+      "homepage": "https://github.com/efureev/yii2-fontawesome"
     }
   ],
   "require": {
     "php": ">=5.4.0",
-
-    "yiisoft/yii2": "2.0.*"
+    "bower-asset/components-font-awesome": "*",
+    "yiisoft/yii2": "~2"
   },
   "autoload": {
     "psr-4": {
-      "rmrevin\\yii\\fontawesome\\": ""
+      "efureev\\src\\fontawesome\\": ""
     }
   },
   "extra": {

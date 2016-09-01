@@ -1,21 +1,18 @@
 <?php
-/**
- * FA.php
- * @author Revin Roman
- * @link https://rmrevin.ru
- */
 
-namespace rmrevin\yii\fontawesome;
+namespace efureev\fontawesome;
 
 /**
  * Class FA
- * @package rmrevin\yii\fontawesome
+ *
+ * @package efureev\fontawesome
  */
 class FA extends FontAwesome
 {
 
     /**
      * Get all icon constants for dropdown list in example
+     *
      * @param bool $html whether to render icon as array value prefix
      * @return array
      */
@@ -35,7 +32,6 @@ class FA extends FontAwesome
 
     /**
      * How I saved from: http://fortawesome.github.io/Font-Awesome/cheatsheet/
-     *
      * $.each($('.col-md-4.col-sm-6.col-lg-3').text().split(' '), function (i, item) {
      *   if(item.indexOf('fa-') !== -1) {
      *     var icon = item.substr(3).replace(/(\n)/g, '');

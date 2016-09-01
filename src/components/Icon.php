@@ -1,22 +1,18 @@
 <?php
-/**
- * Icon.php
- * @author Revin Roman
- * @link https://rmrevin.ru
- */
 
-namespace rmrevin\yii\fontawesome\component;
+namespace efureev\fontawesome\components;
 
-use rmrevin\yii\fontawesome\FA;
+use efureev\fontawesome\FA;
+use yii\base\InvalidConfigException;
 use yii\helpers\Html;
 
 /**
  * Class Icon
- * @package rmrevin\yii\fontawesome\component
+ *
+ * @package efureev\fontawesome\components
  */
 class Icon
 {
-
     /**
      * @var string
      */
@@ -34,7 +30,7 @@ class Icon
 
     /**
      * @param string $name
-     * @param array $options
+     * @param array  $options
      */
     public function __construct($name, $options = [])
     {
@@ -55,7 +51,8 @@ class Icon
     }
 
     /**
-     * @return self
+     * @return \efureev\fontawesome\components\Icon
+     * @throws \yii\base\InvalidConfigException
      */
     public function inverse()
     {
@@ -63,7 +60,8 @@ class Icon
     }
 
     /**
-     * @return self
+     * @return \efureev\fontawesome\components\Icon
+     * @throws \yii\base\InvalidConfigException
      */
     public function spin()
     {
@@ -71,18 +69,8 @@ class Icon
     }
 
     /**
-     * @deprecated
-     * @return self
-     */
-    public function fixed_width()
-    {
-        \Yii::warning(sprintf('You are using an deprecated method `%s`.', 'fixed_width'), __METHOD__);
-
-        return $this->fixedWidth();
-    }
-
-    /**
-     * @return self
+     * @return \efureev\fontawesome\components\Icon
+     * @throws \yii\base\InvalidConfigException
      */
     public function fixedWidth()
     {
@@ -90,16 +78,8 @@ class Icon
     }
 
     /**
-     * @deprecated
-     * @return self
-     */
-    public function ul()
-    {
-        return $this->addCssClass(FA::$cssPrefix . '-ul');
-    }
-
-    /**
-     * @return self
+     * @return \efureev\fontawesome\components\Icon
+     * @throws \yii\base\InvalidConfigException
      */
     public function li()
     {
@@ -107,7 +87,8 @@ class Icon
     }
 
     /**
-     * @return self
+     * @return \efureev\fontawesome\components\Icon
+     * @throws \yii\base\InvalidConfigException
      */
     public function border()
     {
@@ -115,18 +96,8 @@ class Icon
     }
 
     /**
-     * @deprecated
-     * @return self
-     */
-    public function pull_left()
-    {
-        \Yii::warning(sprintf('You are using an deprecated method `%s`.', 'pull_left'), __METHOD__);
-
-        return $this->pullLeft();
-    }
-
-    /**
-     * @return self
+     * @return \efureev\fontawesome\components\Icon
+     * @throws \yii\base\InvalidConfigException
      */
     public function pullLeft()
     {
@@ -134,18 +105,8 @@ class Icon
     }
 
     /**
-     * @deprecated
-     * @return self
-     */
-    public function pull_right()
-    {
-        \Yii::warning(sprintf('You are using an deprecated method `%s`.', 'pull_right'), __METHOD__);
-
-        return $this->pullRight();
-    }
-
-    /**
-     * @return self
+     * @return \efureev\fontawesome\components\Icon
+     * @throws \yii\base\InvalidConfigException
      */
     public function pullRight()
     {
@@ -208,6 +169,7 @@ class Icon
 
     /**
      * Change html tag.
+     *
      * @param string $tag
      * @return static
      * @throws \yii\base\InvalidParamException
@@ -220,10 +182,10 @@ class Icon
     }
 
     /**
-     * @param string $class
-     * @param bool $condition
+     * @param string      $class
+     * @param bool        $condition
      * @param string|bool $throw
-     * @return \rmrevin\yii\fontawesome\component\Icon
+     * @return \efureev\fontawesome\components\Icon
      * @throws \yii\base\InvalidConfigException
      * @codeCoverageIgnore
      */
@@ -235,7 +197,7 @@ class Icon
                     ? 'Condition is false'
                     : $throw;
 
-                throw new \yii\base\InvalidConfigException($message);
+                throw new InvalidConfigException($message);
             }
         } else {
             Html::addCssClass($this->options, $class);
@@ -247,7 +209,7 @@ class Icon
     /**
      * @param string|null $tag
      * @param string|null $content
-     * @param array $options
+     * @param array       $options
      * @return string
      */
     public function render($tag = null, $content = null, $options = [])

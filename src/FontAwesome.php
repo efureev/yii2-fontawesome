@@ -1,21 +1,18 @@
 <?php
-/**
- * FontAwesome.php
- * @author Revin Roman
- * @link https://rmrevin.ru
- */
 
-namespace rmrevin\yii\fontawesome;
+namespace efureev\fontawesome;
 
-use rmrevin\yii\fontawesome\component;
+use efureev\fontawesome\components\Icon;
+use efureev\fontawesome\components\Stack;
+use efureev\fontawesome\components\UnorderedList;
 
 /**
  * Class FA
- * @package rmrevin\yii\fontawesome
+ *
+ * @package efureev\fontawesome
  */
 class FontAwesome
 {
-
     /** @var string CSS Class prefix */
     public static $cssPrefix = 'fa';
 
@@ -23,21 +20,21 @@ class FontAwesome
      * Creates an `Icon` component that can be used to FontAwesome html icon
      *
      * @param string $name
-     * @param array $options
-     * @return component\Icon
+     * @param array  $options
+     * @return Icon
      */
     public static function icon($name, $options = [])
     {
-        return new component\Icon($name, $options);
+        return new Icon($name, $options);
     }
 
     /**
      * Shortcut for `icon()` method
-     * @see icon()
      *
+     * @see icon()
      * @param string $name
-     * @param array $options
-     * @return component\Icon
+     * @param array  $options
+     * @return Icon
      */
     public static function i($name, $options = [])
     {
@@ -48,19 +45,19 @@ class FontAwesome
      * Creates an `Stack` component that can be used to FontAwesome html icon
      *
      * @param array $options
-     * @return component\Stack
+     * @return Stack
      */
     public static function stack($options = [])
     {
-        return new component\Stack($options);
+        return new Stack($options);
     }
 
     /**
      * Shortcut for `stack()` method
-     * @see stack()
      *
+     * @see stack()
      * @param array $options
-     * @return component\Stack
+     * @return Stack
      */
     public static function s($options = [])
     {
@@ -69,16 +66,17 @@ class FontAwesome
 
     /**
      * @param array $options
-     * @return component\UnorderedList
+     * @return UnorderedList
      */
     public static function ul($options = [])
     {
-        return new component\UnorderedList($options);
+        return new UnorderedList($options);
     }
 
     /**
      * Size values
-     * @see rmrevin\yii\fontawesome\component\Icon::size
+     *
+     * @see efureev\fontawesome\component\Icon::size
      */
     const SIZE_LARGE = 'lg';
     const SIZE_2X = '2x';
@@ -88,7 +86,8 @@ class FontAwesome
 
     /**
      * Rotate values
-     * @see rmrevin\yii\fontawesome\component\Icon::rotate
+     *
+     * @see efureev\fontawesome\component\Icon::rotate
      */
     const ROTATE_90 = '90';
     const ROTATE_180 = '180';
@@ -96,7 +95,8 @@ class FontAwesome
 
     /**
      * Flip values
-     * @see rmrevin\yii\fontawesome\component\Icon::flip
+     *
+     * @see efureev\fontawesome\component\Icon::flip
      */
     const FLIP_HORIZONTAL = 'horizontal';
     const FLIP_VERTICAL = 'vertical';

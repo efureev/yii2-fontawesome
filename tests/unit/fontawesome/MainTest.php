@@ -1,35 +1,30 @@
 <?php
-/**
- * MainTest.php
- * @author Revin Roman
- * @link https://rmrevin.ru
- */
 
-namespace rmrevin\yii\fontawesome\tests\unit\fontawesome;
+namespace efureev\fontawesome\tests\unit\fontawesome;
 
-use rmrevin\yii\fontawesome\component\Icon;
-use rmrevin\yii\fontawesome\FA;
-use rmrevin\yii\fontawesome\FontAwesome;
+use efureev\fontawesome\components\Icon;
+use efureev\fontawesome\FA;
+use efureev\fontawesome\FontAwesome;
 
 /**
  * Class MainTest
- * @package rmrevin\yii\fontawesome\tests\unit\fontawesome
+ * @package efureev\fontawesome\tests\unit\fontawesome
  */
-class MainTest extends \rmrevin\yii\fontawesome\tests\unit\TestCase
+class MainTest extends \efureev\fontawesome\tests\unit\TestCase
 {
 
     public function testMain()
     {
-        $this->assertInstanceOf('rmrevin\yii\fontawesome\FA', new FA());
-        $this->assertInstanceOf('rmrevin\yii\fontawesome\FontAwesome', new FA());
+        $this->assertInstanceOf('efureev\fontawesome\FA', new FA());
+        $this->assertInstanceOf('efureev\fontawesome\FontAwesome', new FA());
 
-        $this->assertInstanceOf('rmrevin\yii\fontawesome\FontAwesome', new FontAwesome());
+        $this->assertInstanceOf('efureev\fontawesome\FontAwesome', new FontAwesome());
 
         $Icon = FA::icon('cog');
-        $this->assertInstanceOf('rmrevin\yii\fontawesome\component\Icon', $Icon);
+        $this->assertInstanceOf('efureev\fontawesome\components\Icon', $Icon);
 
         $Stack = FA::stack();
-        $this->assertInstanceOf('rmrevin\yii\fontawesome\component\Stack', $Stack);
+        $this->assertInstanceOf('efureev\fontawesome\components\Stack', $Stack);
     }
 
     public function testStackOutput()

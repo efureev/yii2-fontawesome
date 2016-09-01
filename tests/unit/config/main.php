@@ -1,8 +1,4 @@
 <?php
-/**
- * main.php
- * @author Roman Revin http://phptime.ru
- */
 
 $baseDir = realpath(__DIR__ . '/..');
 
