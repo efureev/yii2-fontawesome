@@ -101,7 +101,7 @@ class Icon
      */
     public function pullLeft()
     {
-        return $this->addCssClass('pull-left');
+        return $this->addCssClass(FA::$cssPrefix . '-pull-left');
     }
 
     /**
@@ -110,7 +110,7 @@ class Icon
      */
     public function pullRight()
     {
-        return $this->addCssClass('pull-right');
+        return $this->addCssClass(FA::$cssPrefix . '-pull-right');
     }
 
     /**
