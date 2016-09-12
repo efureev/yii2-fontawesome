@@ -1,7 +1,7 @@
 {
   "name": "efureev/yii2-fontawesome",
   "description": "Asset Bundle for Yii2 with Font Awesome",
-  "version" : "2.2.2",
+  "version" : "2.18.0",
   "keywords": [
     "yii2",
     "font",
